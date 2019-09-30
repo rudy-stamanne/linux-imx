@@ -319,11 +319,11 @@
 	status = "okay";
 };
 
-&wdog1 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_wdog>;
-	fsl,ext-reset-output;
-};
+//&wdog1 {
+//	pinctrl-names = "default";
+//	pinctrl-0 = <&pinctrl_wdog>;
+//	fsl,ext-reset-output;
+//};
 
 &usbotg1 {
 	dr_mode = "host";
@@ -798,11 +798,11 @@
 			>;
 		};
 
-		pinctrl_wdog: wdoggrp {
-			fsl,pins = <
-				MX6UL_PAD_GPIO1_IO08__WDOG1_WDOG_B	0x78b0
-			>;
-		};
+//		pinctrl_wdog: wdoggrp {
+//			fsl,pins = <
+//				MX6UL_PAD_GPIO1_IO08__WDOG1_WDOG_B	0x78b0
+//			>;
+//		};
 	};
 };
 
