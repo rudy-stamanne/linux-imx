@@ -639,19 +639,22 @@ static int imx_get_sensor_data(struct platform_device *pdev)
 	switch ((val >> 6) & 0x3) {
 	case 0: /* Commercial (0 to 95C) */
 		data->temp_grade = "Commercial";
-		data->temp_max = 95000;
+		data->temp_max = 125000;
+		/* data->temp_max = 95000; */
 		break;
 	case 1: /* Extended Commercial (-20 to 105C) */
 		data->temp_grade = "Extended Commercial";
-		data->temp_max = 105000;
+		data->temp_max = 125000;
+		/* data->temp_max = 105000; */
 		break;
 	case 2: /* Industrial (-40 to 105C) */
 		data->temp_grade = "Industrial";
-		data->temp_max = 105000;
+		data->temp_max = 125000;
+		/* data->temp_max = 105000; */
 		break;
 	case 3: /* Automotive (-40 to 125C) */
 		data->temp_grade = "Automotive";
-		data->temp_max = 125000;
+		data->temp_max = 125000; 
 		break;
 	}
 
